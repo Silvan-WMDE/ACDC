@@ -67,7 +67,6 @@ jobs:
           "$MEDIAWIKI_INSTALL_DIR/maintenance/run" importImages test/browser/files
       - run: npm install
       - run: |
-          curl '$MEDIAWIKI_API_URL?api.php?action=wbeditentity&new=property&data={"labels":{"en":{"language":"en","value":"Propertylabel"}},"datatype":"string"}'
           curl "$MEDIAWIKI_API_URL?action=wbsearchentities&type=property&language=en&format=json&formatversion=2&uselang=en&search=P1"
         env:
           MEDIAWIKI_API_URL: ${{ steps.setup-mediawiki.outputs.api-url }}

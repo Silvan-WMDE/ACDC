@@ -418,6 +418,20 @@ describe( 'AC/DC', () => {
 			}
 		} );
 
+		it( 'can get a property via ID', async () => {
+			const response = await bot.request( {
+				action: 'wbsearchentities',
+				type: 'property',
+				language: 'en',
+				format: 'json',
+				formatversion: 2,
+				uselang: 'en',
+				search: wikibaseItemPropertyId1,
+			} );
+
+			assert.strictEqual( response.search, [] );
+		} );
+
 		it( 'can add a single statement to two files', async () => {
 			const file1 = 'File:ACDC test file 1.pdf';
 			const file2 = 'File:ACDC test file 2.pdf';
