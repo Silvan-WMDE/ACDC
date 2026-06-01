@@ -53,6 +53,7 @@ jobs:
             WikibaseCirrusSearch # required by WikibaseMediaInfo
           local-settings: |
             $wgFileExtensions[] = 'pdf';
+            $wgWBCSUseCirrus = false;
       - name: check out an older Wikibase commit to work around T427695
         env:
           MEDIAWIKI_INSTALL_DIR: ${{ steps.setup-mediawiki.outputs.install-directory }}
