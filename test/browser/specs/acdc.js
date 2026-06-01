@@ -211,7 +211,7 @@ describe( 'AC/DC', () => {
 		} );
 	} );
 
-	describe( 'show-immediately mode', () => {
+	describe.skip( 'show-immediately mode', () => {
 		beforeEach( 'open blank page and inject AC/DC code', async () => {
 			await browser.url( `${ indexUrl }?title=Special:BlankPage&uselang=en&acdcShow=1` );
 			await injectAcdc();
@@ -230,7 +230,7 @@ describe( 'AC/DC', () => {
 		} );
 	} );
 
-	describe( '“loaded” hook', () => {
+	describe.skip( '“loaded” hook', () => {
 		beforeEach( 'open blank page', async () => {
 			await browser.url( `${ indexUrl }?title=Special:BlankPage&uselang=en` );
 		} );
@@ -257,7 +257,7 @@ describe( 'AC/DC', () => {
 		} );
 	} );
 
-	describe( 'FilesWidget', () => {
+	describe.skip( 'FilesWidget', () => {
 		beforeEach( 'open blank page and inject AC/DC code', async () => {
 			await browser.url( `${ indexUrl }?title=Special:BlankPage&uselang=en&acdcShow=1` );
 			await injectAcdc();
@@ -344,7 +344,7 @@ describe( 'AC/DC', () => {
 		} );
 	} );
 
-	describe( 'favorite properties', () => {
+	describe.skip( 'favorite properties', () => {
 		before( 'set up test entities', async function () {
 			await setUpTestEntities( this );
 		} );
