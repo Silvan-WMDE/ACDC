@@ -43,7 +43,7 @@ jobs:
           [url "https://github.com/wikimedia/wikibase-javascript-api.git"]
           insteadOf = "https://gerrit.wikimedia.org/r/wikibase/javascript-api"
           EOF
-      - uses: Silvan-WMDE/setup-mediawiki@v1
+      - uses: lucaswerkmeister/setup-mediawiki@v1
         id: setup-mediawiki
         with:
           extensions: |
